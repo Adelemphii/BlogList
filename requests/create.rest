@@ -2,17 +2,19 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-  "title": "Test Title",
-  "author": "Adelemphii",
-  "url": "thisisaurl.com",
-  "likes": "14"
+  "title": "Test Title 3",
+  "author": "Mike Meyers",
+  "url": "thisisaurl3.com",
+  "likes": "-12"
 }
 
-### Updating Note
-PUT http://localhost:3003/api/notes/679f9080ed8432364c1eb578
+### Updating Blog
+PUT http://localhost:3003/api/blogs/679ff4c4eb7365ce2dbaaba4
 Content-Type: application/json
 
 {
-    "content": "Actually, not really...",
-    "important": false
+  "title": "Test Title 2",
+  "author": "Kiki",
+  "url": "thisisaurl2.com",
+  "likes": "100"
 }
