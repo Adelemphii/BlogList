@@ -1,0 +1,5 @@
+### Get all notes
+GET http://localhost:3003/api/blogs
+
+### Get specific note
+GET http://localhost:3003/api/blogs/679edd212df4d9bb48c51906
