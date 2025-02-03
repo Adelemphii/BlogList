@@ -9,11 +9,11 @@ Content-Type: application/json
 }
 
 ### Updating Blog
-PUT http://localhost:3003/api/blogs/679ff4c4eb7365ce2dbaaba4
+PUT http://localhost:3003/api/blogs/67a1221aa27aab9c5697d477
 Content-Type: application/json
 
 {
-  "title": "Test Title 2",
+  "title": "Test Title 4",
   "author": "Kiki",
   "url": "thisisaurl2.com",
   "likes": "100"
