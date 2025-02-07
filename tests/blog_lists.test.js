@@ -53,66 +53,68 @@ const blogs = [
   }
 ]
 
-test('dummy returns one', () => {
-  const blogs = []
+describe('when there is more than one blog in the list', () => {
+  test('dummy returns one', () => {
+    const blogs = []
 
-  const result = listHelper.dummy(blogs)
-  assert.strictEqual(result, 1)
-})
-
-describe('total likes', () => {
-
-  test('of empty list is zero', () => {
-    assert.strictEqual(listHelper.totalLikes([]), 0)
+    const result = listHelper.dummy(blogs)
+    assert.strictEqual(result, 1)
   })
 
-  test('when list has only one blog equals the likes of that', () => {
-    assert.strictEqual(listHelper.totalLikes([blogs[0]]), 7)
-  })
+  describe('total likes', () => {
 
-  test('of a bigger list is calculated right', () => {
-    assert.strictEqual(listHelper.totalLikes(blogs), 36)
-  })
-})
+    test('of empty list is zero', () => {
+      assert.strictEqual(listHelper.totalLikes([]), 0)
+    })
 
-describe('favorite blog', () => {
-  test('when list has only one blog, equals the likes of that', () => {
-    assert.deepStrictEqual(listHelper.favoriteBlog([blogs[0]]), blogs[0])
-  })
+    test('when list has only one blog equals the likes of that', () => {
+      assert.strictEqual(listHelper.totalLikes([blogs[0]]), 7)
+    })
 
-  test('list calculated right', () => {
-    assert.deepStrictEqual(listHelper.favoriteBlog(blogs), blogs[2])
-  })
-})
-
-describe('most blogs', () => {
-  test('when list contains one blog, equals 1', () => {
-    assert.deepStrictEqual(listHelper.mostBlogs([blogs[0]]), {
-      author: 'Michael Chan',
-      blogs: 1
+    test('of a bigger list is calculated right', () => {
+      assert.strictEqual(listHelper.totalLikes(blogs), 36)
     })
   })
 
-  test('list calculated right', () => {
-    assert.deepStrictEqual(listHelper.mostBlogs(blogs), {
-      author: 'Robert C. Martin',
-      blogs: 3
+  describe('favorite blog', () => {
+    test('when list has only one blog, equals the likes of that', () => {
+      assert.deepStrictEqual(listHelper.favoriteBlog([blogs[0]]), blogs[0])
     })
-  })
-})
 
-describe('most likes', () => {
-  test('when list contains one blog, equals that', () => {
-    assert.deepStrictEqual(listHelper.mostLikes([blogs[0]]), {
-      author: 'Michael Chan',
-      likes: 7
+    test('list calculated right', () => {
+      assert.deepStrictEqual(listHelper.favoriteBlog(blogs), blogs[2])
     })
   })
 
-  test('list calculated right', () => {
-    assert.deepStrictEqual(listHelper.mostLikes(blogs), {
-      author: 'Edsger W. Dijkstra',
-      likes: 17
+  describe('most blogs', () => {
+    test('when list contains one blog, equals 1', () => {
+      assert.deepStrictEqual(listHelper.mostBlogs([blogs[0]]), {
+        author: 'Michael Chan',
+        blogs: 1
+      })
+    })
+
+    test('list calculated right', () => {
+      assert.deepStrictEqual(listHelper.mostBlogs(blogs), {
+        author: 'Robert C. Martin',
+        blogs: 3
+      })
+    })
+  })
+
+  describe('most likes', () => {
+    test('when list contains one blog, equals that', () => {
+      assert.deepStrictEqual(listHelper.mostLikes([blogs[0]]), {
+        author: 'Michael Chan',
+        likes: 7
+      })
+    })
+
+    test('list calculated right', () => {
+      assert.deepStrictEqual(listHelper.mostLikes(blogs), {
+        author: 'Edsger W. Dijkstra',
+        likes: 17
+      })
     })
   })
 })

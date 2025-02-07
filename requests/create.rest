@@ -1,11 +1,13 @@
+### Create Blog
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkZWxlbXBoaWkiLCJpZCI6IjY3YTRmNzQxMWI0YmIwNmI5N2U3MTIwOCIsImlhdCI6MTczODg4OTM2NSwiZXhwIjoxNzM4ODkyOTY1fQ.iVh949dbuyIXvplXnuFceNAYxiAxgxnfVixe3w9vXQ0
 
 {
-  "title": "Test Title 3",
-  "author": "Mike Meyers",
-  "url": "thisisaurl3.com",
-  "likes": "-12"
+  "title": "Test Title 12",
+  "author": "Adelemphii",
+  "url": "thisisaurl11.com",
+  "likes": "69"
 }
 
 ### Updating Blog
@@ -17,4 +19,26 @@ Content-Type: application/json
   "author": "Kiki",
   "url": "thisisaurl2.com",
   "likes": "100"
+}
+
+### Create User
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "D",
+  "name": "Danty",
+  "password": "mom"
+}
+
+### Create Blog
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkZWxlbXBoaWkiLCJpZCI6IjY3YTRmNzQxMWI0YmIwNmI5N2U3MTIwOCIsImlhdCI6MTczODg2NjQwMX0.tcgAck6PsNqk9ctQtstmttziHd-FL69Oi1OB_hvjG98
+
+{
+  "title": "Test Title 8",
+  "author": "Kiki",
+  "url": "thisisaurl8.com",
+  "likes": "69"
 }

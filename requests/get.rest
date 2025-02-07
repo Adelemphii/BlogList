@@ -2,4 +2,4 @@
 GET http://localhost:3003/api/blogs
 
 ### Get specific blog
-GET http://localhost:3003/api/blogs/679ff06495a1130ebcb5c9bb
+GET http://localhost:3003/api/blogs/67a4f930f16effe9a603b47c
