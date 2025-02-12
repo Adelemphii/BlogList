@@ -26,9 +26,9 @@ POST http://localhost:3003/api/users
 Content-Type: application/json
 
 {
-  "username": "D",
-  "name": "Danty",
-  "password": "mom"
+  "username": "PossibleNPC",
+  "name": "Kiki",
+  "password": "potato"
 }
 
 ### Create Blog

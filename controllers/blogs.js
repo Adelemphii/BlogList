@@ -65,10 +65,20 @@ blogsRouter.delete('/:id', middleware.tokenExtractor, middleware.userExtractor, 
 })
 
 blogsRouter.put('/:id', middleware.tokenExtractor, middleware.userExtractor, async (request, response) => {
+  console.log(request.body)
   const { title, author, url, likes } = request.body
+  const token = request.token
+  if(!token) {
+    return response.status(401).json({ error: 'Invalid Token' })
+  }
+  const user = request.user
+  if(!user) {
+    return response.status(401).json({ error: 'invalid token' })
+  }
 
+  const blog = await Blog.findById(request.params.id)
   const updatedBlog = await Blog.findByIdAndUpdate(
-    request.params.id,
+    blog,
     { title, author, url, likes },
     { new: true, runValidators: true, context: 'query' }
   )
